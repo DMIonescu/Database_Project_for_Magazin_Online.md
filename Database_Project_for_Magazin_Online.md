@@ -4,7 +4,16 @@ The scope of this project is to use all the SQL knowledge gained throught the So
 Application under test: "Magazin Online".
 
 Tools used: MySQL Workbench
+
+### Database Schema
+
+You can find below the database schema that was generated through Reverse Engineer and which contains all the tables and the relationships between them.
+
+![reverse engineer1](https://github.com/DMIonescu/Database_Project_for_Magazin_Online.md/assets/154073184/ba3a74dd-eb70-4d54-92a1-6680c6927e89)
+![reverse engineer2](https://github.com/DMIonescu/Database_Project_for_Magazin_Online.md/assets/154073184/1ff44e84-cd41-4a6e-9767-386d550b803b)
+
 ### Database Queries
+
 #### i. DDL (Data Definition Language)
 ##### The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 
