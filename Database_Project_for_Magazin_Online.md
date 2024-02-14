@@ -8,51 +8,51 @@ Tools used: MySQL Workbench
 #### i. DDL (Data Definition Language)
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 
-create database magazinOnline;
-use magazinOnline;
--- drop database magazinOnline;
+create database magazinOnline; <br>
+use magazinOnline;<br>
+-- drop database magazinOnline;<br>
 
--- Produse -> id, nume_produs, stoc, pret, descriere, recenzii, categoria, cluloare, furnizor, brand, id_reducere
-create table Produse (
-id INT NOT NULL auto_increment PRIMARY KEY,
-numeProdus VARCHAR (30) NOT NULL,
-stoc INT NOT NULL,
-pret DECIMAL(8,2) NOT NULL,
-descriere VARCHAR (150),
-recenzii VARCHAR (150),
-categorie VARCHAR (50),
-culoare VARCHAR (15),
-furnizor VARCHAR (30),
-brand VARCHAR (15),
-idReducere INT
-);
-DESC Produse;
-describe Produse;
-drop table Produse;
--- Utilizatori -> id, nume, prenume, email, telefon, username, adresa, data_creare_cont, gen, cont_bancar
-create table Utilizatori (
-id INT PRIMARY KEY NOT NULL auto_increment,
-nume VARCHAR (15) NOT NULL,
-prenume VARCHAR (15) NOT NULL,
-email VARCHAR (30) NOT NULL UNIQUE,
-telefon VARCHAR (10) NOT NULL,
-username VARCHAR (15),
-adresa VARCHAR (50) NOT NULL,
-dataCreareCont DATE,
-gen ENUM ('M','F'),
-nrCard VARCHAR (16)
-);
--- Comenzi -> id, nr_comanda, data_comenzii, id_produs, valoare_comanda, metoda_plate, id_utilizator, metoda_livrare, status_comanda
-create table Comenzi (
-id INT PRIMARY KEY auto_increment NOT NULL,
-nrComanda VARCHAR (10) NOT NULL,
-dataComenzii DATETIME NOT NULL,
-idProdus INT NOT NULL,
-valoareComanda DECIMAL (10,2) NOT NULL,
-metodaPlata VARCHAR (15),
-idUtilizator INT NOT NULL,
-metodaLivrare VARCHAR (15) NOT NULL,
-statusComanda VARCHAR (15) NOT NULL,
+-- Produse -> id, nume_produs, stoc, pret, descriere, recenzii, categoria, cluloare, furnizor, brand, id_reducere<br>
+create table Produse (<br>
+id INT NOT NULL auto_increment PRIMARY KEY,<br>
+numeProdus VARCHAR (30) NOT NULL,<br>
+stoc INT NOT NULL,<br>
+pret DECIMAL(8,2) NOT NULL,<br>
+descriere VARCHAR (150),<br>
+recenzii VARCHAR (150),<br>
+categorie VARCHAR (50),<br>
+culoare VARCHAR (15),<br>
+furnizor VARCHAR (30),<br>
+brand VARCHAR (15),<br>
+idReducere INT<br>
+);<br>
+DESC Produse;<br>
+describe Produse;<br>
+drop table Produse;<br>
+-- Utilizatori -> id, nume, prenume, email, telefon, username, adresa, data_creare_cont, gen, cont_bancar<br>
+create table Utilizatori (<br>
+id INT PRIMARY KEY NOT NULL auto_increment,<br>
+nume VARCHAR (15) NOT NULL,<br>
+prenume VARCHAR (15) NOT NULL,<br>
+email VARCHAR (30) NOT NULL UNIQUE,<br>
+telefon VARCHAR (10) NOT NULL,<br>
+username VARCHAR (15),<br>
+adresa VARCHAR (50) NOT NULL,<br>
+dataCreareCont DATE,<br>
+gen ENUM ('M','F'),<br>
+nrCard VARCHAR (16)<br>
+);<br>
+-- Comenzi -> id, nr_comanda, data_comenzii, id_produs, valoare_comanda, metoda_plate, id_utilizator, metoda_livrare, status_comanda<br>
+create table Comenzi (<br>
+id INT PRIMARY KEY auto_increment NOT NULL,<br>
+nrComanda VARCHAR (10) NOT NULL,<br>
+dataComenzii DATETIME NOT NULL,<br>
+idProdus INT NOT NULL,<br>
+valoareComanda DECIMAL (10,2) NOT NULL,<br>
+metodaPlata VARCHAR (15),<br>
+idUtilizator INT NOT NULL,<br>
+metodaLivrare VARCHAR (15) NOT NULL,<br>
+statusComanda VARCHAR (15) NOT NULL,<br>
 FOREIGN KEY (idProdus) references Produse (id),
 FOREIGN KEY (idUtilizator) references Utilizatori (id)
 );
