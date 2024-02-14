@@ -10,7 +10,7 @@ Tools used: MySQL Workbench
 You can find below the database schema that was generated through Reverse Engineer and which contains all the tables and the relationships between them.
 
 ![reverse engineer1](https://github.com/DMIonescu/Database_Project_for_Magazin_Online.md/assets/154073184/ba3a74dd-eb70-4d54-92a1-6680c6927e89)
-![reverse engineer2](https://github.com/DMIonescu/Database_Project_for_Magazin_Online.md/assets/154073184/1ff44e84-cd41-4a6e-9767-386d550b803b)
+![reverse engineer12](https://github.com/DMIonescu/Database_Project_for_Magazin_Online.md/assets/154073184/de2206e1-005e-47c0-ad71-9753dce4f8ba)
 
 ### Database Queries
 
