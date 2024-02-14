@@ -6,7 +6,7 @@ Application under test: "Magazin Online".
 Tools used: MySQL Workbench
 ### Database Queries
 #### i. DDL (Data Definition Language)
-The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
+##### The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 
 create database magazinOnline; <br>
 use magazinOnline;<br>
@@ -86,9 +86,9 @@ foreign key (idComanda) references Comenzi (id) on update cascade<br>
 );<br>
 
 #### ii. DML (Data Manipulation Language)
-In order to be able to use the database I populated the tables with various data necessary in order to perform queries and manipulate the data. In the testing process, this necessary data is identified in the Test Design phase and created in the Test Implementation phase.
+##### In order to be able to use the database I populated the tables with various data necessary in order to perform queries and manipulate the data. In the testing process, this necessary data is identified in the Test Design phase and created in the Test Implementation phase.
 
-Below you can find all the insert instructions that were created in the scope of this project:
+##### Below you can find all the insert instructions that were created in the scope of this project:
 
 alter table Facturi drop column suma;<br>
 desc Facturi;<br>
@@ -139,7 +139,7 @@ update Produse<br>
 set stoc = 2;<br>
 
 #### iii. DQL (Data Query Language)
-After the testing process, I deleted the data that was no longer relevant in order to preserve the database clean:
+##### After the testing process, I deleted the data that was no longer relevant in order to preserve the database clean:
 
 delete from Produse where id = 2;<br>
 update Produse set categorie = "telefoane", culoare= "rosu", brand = "Sony" where id = 1;<br>
