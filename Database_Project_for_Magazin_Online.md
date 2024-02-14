@@ -129,7 +129,7 @@ desc Facturi;<br>
 insert into Facturi values (1, 1, 1, "2023-12-05 10:53:49","2023-12-15 10:53:49", 1525 );<br>
 select * from Facturi;<br>
 
-After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
+##### After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
 
 SET SQL_SAFE_UPDATES=0;<br>
 update Produse <br>
@@ -172,7 +172,7 @@ values ("nr4", "2023-12-05 12:10:10", 3, 2800, 3, "posta", "livrata" ),<br>
 ("nr6", "2023-12-09 18:10:10", 3, 810, 3, "curier", "expediata" ),<br>
 ("nr7", "2023-12-12 15:10:10", 4, 1050, 2, "curier", "expediata" );<br>
 
-In order to simulate various scenarios that might happen in real life I created the following queries that would cover multiple potential real-life situations:
+##### In order to simulate various scenarios that might happen in real life I created the following queries that would cover multiple potential real-life situations:
 
 select * from Comenzi;<br>
 select * from Comenzi where valoareComanda>850 AND idUtilizator=3;<br>
